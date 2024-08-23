@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Header from "@/components/Header";
 import Experience from "@/components/Experience";
 import ProjectCard from "@/components/ProjectCard";
+import SocialLink from "@/components/SocialLink";
 import { FaPython, FaCss3, FaHtml5, FaReact, FaDocker } from "react-icons/fa";
 import { BsFiletypeSql } from "react-icons/bs";
 import { SiTypescript } from "react-icons/si";
@@ -22,20 +23,14 @@ function Home() {
           <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
           <Header />
           <div className="text-5xl flex justify-center gap-14 dark:text-gray-400">
-            <a
+            <SocialLink
               href="https://github.com/MateuszGrabarczyk"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <AiFillGithub className="cursor-pointer" />
-            </a>
-            <a
+              Icon={AiFillGithub}
+            />
+            <SocialLink
               href="https://www.linkedin.com/in/mateusz-grabarczyk-361851210/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <AiFillLinkedin className="cursor-pointer" />
-            </a>
+              Icon={AiFillLinkedin}
+            />
           </div>
           <div className="flex justify-center py-10">
             <Image
