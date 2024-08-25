@@ -15,7 +15,7 @@ function Home() {
   const [darkMode, setDarkMode] = useState(false);
   return (
     <div className={darkMode ? "dark" : ""}>
-      <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
+      <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900 transition-colors duration-300">
         <section className="min-h-screen">
           <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
           <Header />
