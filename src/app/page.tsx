@@ -13,6 +13,7 @@ import { TbBrandNextjs } from "react-icons/tb";
 import Image from "next/image";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { useState } from "react";
+import Skills from "@/components/Skills";
 
 function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -44,6 +45,7 @@ function Home() {
         </section>
 
         <Experience />
+        <Skills />
 
         <section>
           <h3 className="text-3xl py-1 dark:text-white">My projects</h3>
