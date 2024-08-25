@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# My Portfolio
 
-## Getting Started
+This is a personal portfolio website built with Next.js and Tailwind CSS. The portfolio showcases my skills, projects, and experience, and includes a dark mode toggle for better user experience.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Responsive Design**: The website is fully responsive and looks great on all devices.
+- **Dark Mode**: Users can switch between light and dark themes.
+- **Dynamic Components**: The portfolio is modular, with components like `Navbar`, `Header`, `Experience`, `Skills`, `Projects`, and more.
+- **Tailwind CSS**: Fast styling using Tailwind CSS with conditional classes for dark mode.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js**: A React framework for building fast and user-friendly web applications.
+- **React**: JavaScript library for building user interfaces.
+- **TypeScript**: Typed JavaScript for better code quality and maintainability.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **React Icons**: Icon library for easily adding icons to the project.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Components
 
-## Learn More
+### `Navbar`
 
-To learn more about Next.js, take a look at the following resources:
+The navigation bar component, which includes a dark mode toggle.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### `Header`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The header component that introduces the portfolio.
 
-## Deploy on Vercel
+### `Experience`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+A component showcasing professional experience.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### `Skills`
+
+A component listing technical skills and technologies.
+
+### `Projects`
+
+A component that lists various projects with links to their respective GitHub repositories.
+
+### `SocialLinks`
+
+A component that displays social media links (GitHub, LinkedIn) using icons.
+
+### `ProfilePicture`
+
+A component that displays the profile picture with styling.
+
+## Installation and Setup
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/MateuszGrabarczyk/My-portfolio-website.git
+   ```
+
+2. **Navigate to the project directory:**
+
+   ```bash
+   cd portfolio
+   ```
+
+3. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+4. **Run the development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+5. **Open your browser and visit:**
+   ```
+   http://localhost:3000
+   ```
+
+## Usage
+
+- **Toggle Dark Mode:** Use the dark mode toggle in the navbar to switch between light and dark themes.
+- **View Projects:** Browse the project cards to see details about each project and visit their GitHub repositories.
