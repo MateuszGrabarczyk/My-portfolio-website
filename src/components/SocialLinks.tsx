@@ -18,7 +18,7 @@ const socialLinks: SocialLinkItem[] = [
   },
 ];
 
-const SocialLinks: React.FC = () => {
+function SocialLinks() {
   return (
     <div className="text-5xl flex justify-center gap-14 dark:text-gray-400">
       {socialLinks.map((link, index) => (
@@ -26,6 +26,6 @@ const SocialLinks: React.FC = () => {
       ))}
     </div>
   );
-};
+}
 
 export default SocialLinks;
