@@ -22,7 +22,7 @@ const skills: Skill[] = [
   { name: "React", icon: <FaReact size={40} className="text-blue-400" /> },
   {
     name: "Next.js",
-    icon: <SiNextdotjs size={40} className="text-black dark:text-white" />,
+    icon: <SiNextdotjs size={40} className="text-black" />,
   },
   { name: "HTML5", icon: <FaHtml5 size={40} className="text-orange-500" /> },
   { name: "CSS3", icon: <FaCss3 size={40} className="text-blue-600" /> },
@@ -38,12 +38,10 @@ function Skills() {
         {skills.map((skill) => (
           <div
             key={skill.name}
-            className="flex flex-col items-center p-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg w-28 h-28 transform transition-transform duration-300 hover:scale-110 hover:shadow-2xl"
+            className="flex flex-col items-center p-4 bg-white rounded-lg shadow-lg w-28 h-28 transform transition-transform duration-300 hover:scale-110 hover:shadow-2xl"
           >
             {skill.icon}
-            <span className="mt-2 text-sm dark:text-gray-400">
-              {skill.name}
-            </span>
+            <span className="mt-2 text-sm dark:text-black">{skill.name}</span>
           </div>
         ))}
       </div>
