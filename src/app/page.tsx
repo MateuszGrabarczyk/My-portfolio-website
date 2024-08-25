@@ -1,10 +1,8 @@
 "use client";
 
-import React from "react";
 import Navbar from "@/components/Navbar";
 import Header from "@/components/Header";
 import Experience from "@/components/Experience";
-import Image from "next/image";
 import { useState } from "react";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";

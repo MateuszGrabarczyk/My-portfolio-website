@@ -1,16 +1,16 @@
-import React from "react";
+import { IconType } from "react-icons";
 
 interface SocialLinkProps {
   href: string;
-  Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  Icon: IconType;
 }
 
-const SocialLink: React.FC<SocialLinkProps> = ({ href, Icon }) => {
+function SocialLink({ href, Icon }: SocialLinkProps) {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer">
       <Icon className="cursor-pointer text-4xl" />
     </a>
   );
-};
+}
 
 export default SocialLink;

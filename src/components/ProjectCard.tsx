@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import { IconType } from "react-icons";
 import { AiFillGithub } from "react-icons/ai";
