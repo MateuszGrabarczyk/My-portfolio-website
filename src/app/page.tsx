@@ -8,6 +8,7 @@ import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import SocialLinks from "@/components/SocialLinks";
 import ProfilePicture from "@/components/ProfilePicture";
+import Contact from "@/components/Contact";
 
 function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -24,6 +25,7 @@ function Home() {
         <Experience />
         <Skills />
         <Projects />
+        <Contact />
       </main>
     </div>
   );
