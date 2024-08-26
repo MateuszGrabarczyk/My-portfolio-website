@@ -1,21 +1,17 @@
+import Skill from "@/components/Skill";
 import { FaPython, FaCss3, FaHtml5, FaReact, FaDocker } from "react-icons/fa";
 import { BsFiletypeSql } from "react-icons/bs";
 import { SiTypescript, SiNextdotjs, SiFastapi } from "react-icons/si";
 import { TbBrandDjango } from "react-icons/tb";
 
-type Skill = {
-  name: string;
-  icon: React.ReactNode;
-};
-
-const skills: Skill[] = [
+const skills = [
   {
     name: "Python",
     icon: <FaPython size={40} className="text-blue-500 hover:animate-pulse" />,
   },
   {
     name: "Django",
-    icon: <TbBrandDjango size={40} className="hover:animate-bounce" />,
+    icon: <TbBrandDjango size={40} className="hover:animate-pulse" />,
   },
   {
     name: "FastAPI",
@@ -24,7 +20,7 @@ const skills: Skill[] = [
   {
     name: "TypeScript",
     icon: (
-      <SiTypescript size={40} className="text-blue-600 hover:animate-bounce" />
+      <SiTypescript size={40} className="text-blue-600 hover:animate-pulse" />
     ),
   },
   {
@@ -33,7 +29,7 @@ const skills: Skill[] = [
   },
   {
     name: "Next.js",
-    icon: <SiNextdotjs size={40} className="text-black hover:animate-bounce" />,
+    icon: <SiNextdotjs size={40} className="text-black hover:animate-pulse" />,
   },
   {
     name: "HTML5",
@@ -41,7 +37,7 @@ const skills: Skill[] = [
   },
   {
     name: "CSS3",
-    icon: <FaCss3 size={40} className="text-blue-600 hover:animate-bounce" />,
+    icon: <FaCss3 size={40} className="text-blue-600 hover:animate-pulse" />,
   },
   {
     name: "Docker",
@@ -50,10 +46,7 @@ const skills: Skill[] = [
   {
     name: "SQL",
     icon: (
-      <BsFiletypeSql
-        size={40}
-        className="text-green-500 hover:animate-bounce"
-      />
+      <BsFiletypeSql size={40} className="text-green-500 hover:animate-pulse" />
     ),
   },
 ];
@@ -64,13 +57,7 @@ function Skills() {
       <h3 className="text-3xl py-1 dark:text-white">Skills & Technologies</h3>
       <div className="flex flex-wrap justify-center gap-6 mt-6">
         {skills.map((skill) => (
-          <div
-            key={skill.name}
-            className="flex flex-col items-center p-4 bg-white rounded-lg shadow-lg w-28 h-28 transform transition-transform duration-300 hover:scale-110 hover:shadow-2xl"
-          >
-            {skill.icon}
-            <span className="mt-2 text-sm dark:text-black">{skill.name}</span>
-          </div>
+          <Skill key={skill.name} name={skill.name} icon={skill.icon} />
         ))}
       </div>
     </section>
