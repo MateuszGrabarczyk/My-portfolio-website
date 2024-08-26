@@ -9,25 +9,53 @@ type Skill = {
 };
 
 const skills: Skill[] = [
-  { name: "Python", icon: <FaPython size={40} className="text-blue-500" /> },
+  {
+    name: "Python",
+    icon: <FaPython size={40} className="text-blue-500 hover:animate-pulse" />,
+  },
   {
     name: "Django",
-    icon: <TbBrandDjango size={40} />,
+    icon: <TbBrandDjango size={40} className="hover:animate-bounce" />,
   },
-  { name: "FastAPI", icon: <SiFastapi size={40} className="text-blue-500" /> },
+  {
+    name: "FastAPI",
+    icon: <SiFastapi size={40} className="text-blue-500 hover:animate-pulse" />,
+  },
   {
     name: "TypeScript",
-    icon: <SiTypescript size={40} className="text-blue-600" />,
+    icon: (
+      <SiTypescript size={40} className="text-blue-600 hover:animate-bounce" />
+    ),
   },
-  { name: "React", icon: <FaReact size={40} className="text-blue-400" /> },
+  {
+    name: "React",
+    icon: <FaReact size={40} className="text-blue-400 hover:animate-spin" />,
+  },
   {
     name: "Next.js",
-    icon: <SiNextdotjs size={40} className="text-black" />,
+    icon: <SiNextdotjs size={40} className="text-black hover:animate-bounce" />,
   },
-  { name: "HTML5", icon: <FaHtml5 size={40} className="text-orange-500" /> },
-  { name: "CSS3", icon: <FaCss3 size={40} className="text-blue-600" /> },
-  { name: "Docker", icon: <FaDocker size={40} className="text-blue-400" /> },
-  { name: "SQL", icon: <BsFiletypeSql size={40} className="text-green-500" /> },
+  {
+    name: "HTML5",
+    icon: <FaHtml5 size={40} className="text-orange-500 hover:animate-pulse" />,
+  },
+  {
+    name: "CSS3",
+    icon: <FaCss3 size={40} className="text-blue-600 hover:animate-bounce" />,
+  },
+  {
+    name: "Docker",
+    icon: <FaDocker size={40} className="text-blue-400 hover:animate-pulse" />,
+  },
+  {
+    name: "SQL",
+    icon: (
+      <BsFiletypeSql
+        size={40}
+        className="text-green-500 hover:animate-bounce"
+      />
+    ),
+  },
 ];
 
 function Skills() {
