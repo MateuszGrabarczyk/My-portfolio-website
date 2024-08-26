@@ -35,8 +35,49 @@ function Navbar({ darkMode, setDarkMode }: NavbarProps) {
   };
 
   return (
-    <nav className="py-10 mb-12 flex justify-end">
-      <Toaster />
+    <nav className="py-10 mb-12 flex justify-between items-center">
+      <ul className="flex items-center space-x-8">
+        <li>
+          <a
+            href="#home"
+            className="text-gray-800 dark:text-white hover:text-teal-500"
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            href="#experience"
+            className="text-gray-800 dark:text-white hover:text-teal-500"
+          >
+            Experience
+          </a>
+        </li>
+        <li>
+          <a
+            href="#skills"
+            className="text-gray-800 dark:text-white hover:text-teal-500"
+          >
+            Skills
+          </a>
+        </li>
+        <li>
+          <a
+            href="#projects"
+            className="text-gray-800 dark:text-white hover:text-teal-500"
+          >
+            Projects
+          </a>
+        </li>
+        <li>
+          <a
+            href="#contact"
+            className="text-gray-800 dark:text-white hover:text-teal-500"
+          >
+            Contact
+          </a>
+        </li>
+      </ul>
       <ul className="flex items-center">
         <li>
           <BsFillMoonStarsFill
@@ -55,6 +96,7 @@ function Navbar({ darkMode, setDarkMode }: NavbarProps) {
           </a>
         </li>
       </ul>
+      <Toaster />
     </nav>
   );
 }

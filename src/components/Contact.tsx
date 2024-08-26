@@ -38,7 +38,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-16">
+    <section id="contact" className="py-16">
       <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-6">
         Contact Me
       </h2>

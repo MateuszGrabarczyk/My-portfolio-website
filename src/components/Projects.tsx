@@ -42,7 +42,7 @@ const projects: Project[] = [
 
 function Projects() {
   return (
-    <section>
+    <section id="projects">
       <h3 className="text-3xl py-1 dark:text-white">My Projects</h3>
       <div className="lg:flex gap-10">
         {projects.map((project, index) => (
