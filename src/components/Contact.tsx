@@ -48,7 +48,7 @@ const Contact = () => {
           validationSchema={validationSchema}
           onSubmit={handleSubmit}
         >
-          {({ isValid }) => (
+          {({ isValid, dirty }) => (
             <Form>
               <div className="mb-4">
                 <label
@@ -115,9 +115,9 @@ const Contact = () => {
                 <button
                   type="submit"
                   className={`bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-6 py-2 rounded-md mt-4 ${
-                    !isValid ? "opacity-50 cursor-not-allowed" : ""
+                    !(isValid && dirty) ? "opacity-50 cursor-not-allowed" : ""
                   }`}
-                  disabled={!isValid}
+                  disabled={!(isValid && dirty)}
                 >
                   Send me a message!
                 </button>
