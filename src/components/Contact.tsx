@@ -1,10 +1,14 @@
 "use client";
 
+import { useState, useRef, useEffect } from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import toast from "react-hot-toast";
 
 const Contact = () => {
+  const [hasInteracted, setHasInteracted] = useState(false);
+  const formRef = useRef<HTMLDivElement>(null);
+
   const initialValues = {
     name: "",
     email: "",
@@ -32,14 +36,40 @@ const Contact = () => {
     toast.dismiss();
     toast.success("Message sent successfully!");
     resetForm();
+    setHasInteracted(false);
   };
+
+  const handleFocus = () => {
+    if (!hasInteracted) {
+      setHasInteracted(true);
+    }
+  };
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (formRef.current && !formRef.current.contains(event.target as Node)) {
+      setHasInteracted(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <section id="contact" className="py-16">
       <h2 className="text-3xl text-center text-gray-800 dark:text-white mb-6">
         Contact Me
       </h2>
-      <div className="max-w-md mx-auto bg-white p-8 rounded-md shadow-md">
+      <div
+        ref={formRef}
+        className={`max-w-md mx-auto bg-white dark:bg-gray-800 p-8 rounded-xl ${
+          hasInteracted ? "shadow-md dark:shadow-teal-500/50" : ""
+        } shadow-lg transition-shadow duration-300`}
+      >
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
@@ -49,7 +79,7 @@ const Contact = () => {
             <Form>
               <div className="mb-4">
                 <label
-                  className="block text-gray-700 dark:text-gray-700"
+                  className="block text-gray-700 dark:text-gray-300"
                   htmlFor="name"
                 >
                   Name
@@ -58,7 +88,8 @@ const Contact = () => {
                   type="text"
                   id="name"
                   name="name"
-                  className="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  onFocus={handleFocus}
+                  className="mt-1 w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500 dark:bg-gray-700 dark:text-gray-300"
                 />
                 <ErrorMessage
                   name="name"
@@ -69,7 +100,7 @@ const Contact = () => {
 
               <div className="mb-4">
                 <label
-                  className="block text-gray-700 dark:text-gray-700"
+                  className="block text-gray-700 dark:text-gray-300"
                   htmlFor="email"
                 >
                   Email
@@ -78,7 +109,8 @@ const Contact = () => {
                   type="email"
                   id="email"
                   name="email"
-                  className="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  onFocus={handleFocus}
+                  className="mt-1 w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500 dark:bg-gray-700 dark:text-gray-300"
                 />
                 <ErrorMessage
                   name="email"
@@ -89,7 +121,7 @@ const Contact = () => {
 
               <div className="mb-4">
                 <label
-                  className="block text-gray-700 dark:text-gray-700"
+                  className="block text-gray-700 dark:text-gray-300"
                   htmlFor="message"
                 >
                   Message
@@ -99,7 +131,8 @@ const Contact = () => {
                   id="message"
                   name="message"
                   rows={4}
-                  className="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  onFocus={handleFocus}
+                  className="mt-1 w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500 dark:bg-gray-700 dark:text-gray-300"
                 />
                 <ErrorMessage
                   name="message"
@@ -111,7 +144,7 @@ const Contact = () => {
               <div className="text-center">
                 <button
                   type="submit"
-                  className={`bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-6 py-2 rounded-md mt-4 ${
+                  className={`bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-6 py-2 rounded-md mt-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl dark:hover:shadow-teal-500/50 ${
                     !(isValid && dirty) ? "opacity-50 cursor-not-allowed" : ""
                   }`}
                   disabled={!(isValid && dirty)}
