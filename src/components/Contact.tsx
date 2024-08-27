@@ -30,16 +30,13 @@ const Contact = () => {
     console.log("Form data", values);
 
     toast.dismiss();
-    toast.success("Message sent successfully!", {
-      duration: 1500,
-      position: "top-center",
-    });
+    toast.success("Message sent successfully!");
     resetForm();
   };
 
   return (
     <section id="contact" className="py-16">
-      <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-6">
+      <h2 className="text-3xl text-center text-gray-800 dark:text-white mb-6">
         Contact Me
       </h2>
       <div className="max-w-md mx-auto bg-white p-8 rounded-md shadow-md">
