@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { DarkModeProvider } from "@/context/DarkModeContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                var darkMode = localStorage.getItem('darkMode');
+                if (darkMode === 'true') {
+                  document.documentElement.style.backgroundColor = '#111827'; // dark background color
+                } else {
+                  document.documentElement.style.backgroundColor = '#ffffff'; // light background color
+                }
+              })();
+            `,
+          }}
+        />
+      </head>
+      <body className={inter.className}>
+        <DarkModeProvider>{children}</DarkModeProvider>
+      </body>
     </html>
   );
 }

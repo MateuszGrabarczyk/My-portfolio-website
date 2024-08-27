@@ -3,13 +3,10 @@ import { BsFillMoonStarsFill, BsDownload } from "react-icons/bs";
 import { toast, Toaster } from "react-hot-toast";
 import { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
+import { useDarkMode } from "@/context/DarkModeContext";
 
-interface NavbarProps {
-  darkMode: boolean;
-  setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-function Navbar({ darkMode, setDarkMode }: NavbarProps) {
+function Navbar() {
+  const { darkMode, toggleDarkMode } = useDarkMode();
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -29,7 +26,7 @@ function Navbar({ darkMode, setDarkMode }: NavbarProps) {
 
   const handleDarkModeToggle = () => {
     toast.dismiss();
-    setDarkMode(!darkMode);
+    toggleDarkMode();
     toast(darkMode ? "Switched to Light Mode" : "Switched to Dark Mode", {
       icon: darkMode ? "☀️" : "🌙",
       duration: 1500,
