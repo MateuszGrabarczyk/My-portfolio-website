@@ -1,0 +1,13 @@
+version: "3.5"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: portfolio
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app # This allows live reloading of code in development mode
+      - /app/node_modules # Prevents overwriting node_modules in the container
+    command: npm run dev # Use npm run dev for development
