@@ -1,7 +1,7 @@
 import NavItems from "@/components/NavItems";
 import { BsFillMoonStarsFill, BsDownload } from "react-icons/bs";
 import { toast, Toaster } from "react-hot-toast";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { useDarkMode } from "@/context/DarkModeContext";
 

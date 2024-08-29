@@ -1,3 +1,4 @@
+import React from "react";
 import NavItem from "@/components/NavItem";
 
 type NavItem = {
