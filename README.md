@@ -132,6 +132,14 @@ Components for listing individual skills (`Skill`) and a grouped listing of skil
    docker-compose down
    ```
 
+## Running Tests
+
+1. **Run Tests in terminal or in Docker Container Terminal**
+
+   ```bash
+   npm test
+   ```
+
 ## Usage
 
 - **Toggle Dark Mode:** Use the dark mode toggle in the navbar to switch between light and dark themes.
