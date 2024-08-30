@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import toast from "react-hot-toast";
@@ -66,6 +66,7 @@ const Contact = () => {
       </h2>
       <div
         ref={formRef}
+        data-testid="form-container"
         className={`max-w-md mx-auto bg-white dark:bg-gray-800 p-8 rounded-xl ${
           hasInteracted ? "shadow-md dark:shadow-teal-500/50" : ""
         } shadow-lg transition-shadow duration-300`}
