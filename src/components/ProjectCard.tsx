@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { IconType } from "react-icons";
 import { AiFillGithub } from "react-icons/ai";
+import React from "react";
 
 interface ProjectCardProps {
   title: string;
@@ -44,6 +45,7 @@ function ProjectCard({
         {tools.map((ToolIcon, index) => (
           <ToolIcon
             key={index}
+            data-testid={`tool-icon-${index}`}
             className="hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
           />
         ))}
