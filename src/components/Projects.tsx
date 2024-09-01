@@ -1,3 +1,4 @@
+import React from "react";
 import ProjectCard from "@/components/ProjectCard";
 import { FaPython, FaCss3, FaHtml5, FaReact, FaDocker } from "react-icons/fa";
 import { BsFiletypeSql } from "react-icons/bs";
@@ -12,7 +13,7 @@ type Project = {
   tools: IconType[];
 };
 
-const projects: Project[] = [
+export const projects: Project[] = [
   {
     title: "University Reviews App",
     githubLink:
