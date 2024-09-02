@@ -24,9 +24,9 @@ export default function RootLayout({
               (function() {
                 var darkMode = localStorage.getItem('darkMode');
                 if (darkMode === 'true') {
-                  document.documentElement.style.backgroundColor = '#111827'; // dark background color
+                  document.documentElement.style.backgroundColor = '#111827';
                 } else {
-                  document.documentElement.style.backgroundColor = '#ffffff'; // light background color
+                  document.documentElement.style.backgroundColor = '#ffffff';
                 }
               })();
             `,

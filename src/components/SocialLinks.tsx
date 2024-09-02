@@ -1,3 +1,4 @@
+import React from "react";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import SocialLink from "@/components/SocialLink";
 import { IconType } from "react-icons";
@@ -7,7 +8,7 @@ type SocialLinkItem = {
   Icon: IconType;
 };
 
-const socialLinks: SocialLinkItem[] = [
+export const socialLinks: SocialLinkItem[] = [
   {
     href: "https://github.com/MateuszGrabarczyk",
     Icon: AiFillGithub,
@@ -20,7 +21,10 @@ const socialLinks: SocialLinkItem[] = [
 
 function SocialLinks() {
   return (
-    <div className="text-5xl flex justify-center gap-14 dark:text-gray-400">
+    <div
+      className="text-5xl flex justify-center gap-14 dark:text-gray-400"
+      data-testid="social-links-container"
+    >
       {socialLinks.map((link, index) => (
         <SocialLink key={index} href={link.href} Icon={link.Icon} />
       ))}

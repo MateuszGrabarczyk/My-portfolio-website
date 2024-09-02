@@ -27,7 +27,6 @@ describe("Header Component", () => {
       /I'm interested in Backend Development with Python, but I also like Frontend technologies, especially React!/i
     );
 
-    // Check initial visibility (after useEffect)
     expect(titleElement).toHaveClass("translate-x-0 opacity-100");
     expect(subtitleElement).toHaveClass("translate-x-0 opacity-100");
     expect(paragraphElement).toHaveClass("opacity-100");

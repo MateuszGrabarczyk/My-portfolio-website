@@ -38,7 +38,7 @@ export const DarkModeProvider = ({ children }: { children: ReactNode }) => {
   };
 
   if (!isMounted) {
-    return null; // Prevents the component from rendering until after mounting
+    return null;
   }
 
   return (
