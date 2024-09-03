@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Typewriter } from "react-simple-typewriter";
 
 function Header() {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,7 +24,13 @@ function Header() {
           isVisible ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
         }`}
       >
-        Fullstack developer.
+        <Typewriter
+          words={["Fullstack Developer."]}
+          loop={false}
+          typeSpeed={200}
+          deleteSpeed={100}
+        />
+        &nbsp;
       </h3>
       <p
         className={`text-md py-5 leading-8 text-gray-800 dark:text-gray-200 md:text-xl max-w-lg mx-auto lg:max-w-xl xl:max-w-2xl transition-opacity duration-[1s] ${
