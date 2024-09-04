@@ -37,9 +37,9 @@ function Header() {
           isVisible ? "opacity-100" : "opacity-0"
         }`}
       >
-        I'm interested in Backend Development with Python, but I also like
+        I&apos;m interested in Backend Development with Python, but I also like
         Frontend technologies, especially React! I love to learn new things and
-        I'm a big cycling fan. Currently I'm learning German as well!
+        I&apos;m a big cycling fan. Currently I&apos;m learning German as well!
       </p>
     </div>
   );
